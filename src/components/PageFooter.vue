@@ -1,27 +1,27 @@
 <template>
     <footer class="navbar z-[50]">
         <img src="@/assets/tabbar.png" class="tabbar" />
-        <div class="button-container">
+        <div class="button_container">
             <button @click="goTo('home')" class="navbar-button" :class="{ 'active': activeButton === 'home' }" style="margin-left: 20px;">
-                <img :src="activeButton === 'home' ? '/src/assets/home-active.svg' : '/src/assets/home.svg'" alt="Home Icon" class="navbar-icon" />
+                <img src='/src/assets/home.svg' alt="Home Icon" class="navbar-icon" />
                 <span :class="{ 'active-text': activeButton === 'home' }" class="navbar-text">Home</span>
             </button>
             <button @click="goTo('activity')" class="navbar-button" :class="{ 'active': activeButton === 'activity' }">
-                <img :src="activeButton === 'activity' ? '/src/assets/activity-active.svg' : '/src/assets/activity.svg'" alt="activity Icon" class="navbar-icon" />
+                <img src='/src/assets/activity.svg' alt="activity Icon" class="navbar-icon" />
                 <span :class="{ 'active-text': activeButton === 'activity' }" class="navbar-text">Activity</span>
             </button>
             <button @click="goTo('promotion')" class="navbar-button-promotion" :class="{ 'active': activeButton === 'promotion' }" style="margin-left:5px;">
                 <div class="promotion">
-                    <img src="@/assets/promotion.svg" :class="{ 'active-icon': activeButton === 'promotion' }" alt="Promotion Icon" class="navbar-icon-promotion" />
+                    <img src="/src/assets/promotion.svg" :class="{ 'active-icon': activeButton === 'promotion' }" alt="Promotion Icon" class="navbar-icon-promotion" />
                 </div>
                 <span :class="{ 'active-text-promotion': activeButton === 'promotion' }" class="navbar-text-promotion">Promotion</span>
             </button>
             <button @click="goTo('wallet')" class="navbar-button" :class="{ 'active': activeButton === 'wallet' }">
-                <img :src="activeButton === 'wallet' ? '/src/assets/wallet-active.svg' : '/src/assets/wallet.svg'" alt="wallet Icon" class="navbar-icon" />
+                <img src='/src/assets/wallet.svg' alt="wallet Icon" class="navbar-icon" />
                 <span :class="{ 'active-text': activeButton === 'wallet' }" class="navbar-text">Wallet</span>
             </button>
             <button @click="goTo('account')" class="navbar-button" :class="{ 'active': activeButton === 'account' }" style="margin-right: 20px;">
-                <img :src="activeButton === 'account' ? '/src/assets/account-active.svg' : '/src/assets/account.svg'" alt="account Icon" class="navbar-icon" />
+                <img src='/src/assets/account.svg' alt="account Icon" class="navbar-icon" />
                 <span :class="{ 'active-text': activeButton === 'account' }" class="navbar-text">Account</span>
             </button>
         </div>
@@ -148,7 +148,7 @@ export default {
 }
 
 
-.button-container {
+.button_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -157,6 +157,10 @@ export default {
     /* Position relative to contain absolutely positioned children */
     z-index: 1;
     /* Ensure buttons are in front of the image */
+}
+
+.button_container button:hover {
+    box-shadow: none !important;
 }
 
 

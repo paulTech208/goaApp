@@ -30,6 +30,22 @@
   border-width: 1px;
   border-color: #4784ff;
   border-radius: 30px;
-  padding: 5px 40px;
+  padding: 5px 30px;
+}
+
+@media (max-width: 390px) {
+  .game_top button {
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 5px 30px;
+  }
+}
+
+@media (max-width: 360px) {
+  .game_top button {
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 3px 20px;
+  }
 }
 </style>

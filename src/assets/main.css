@@ -3,6 +3,11 @@
 @import 'tailwindcss/utilities';
 @import './base.css';
 
+@font-face {
+  font-family: "BAHNSCHRIFT";
+  src: url("@/assets/fonts/BAHNSCHRIFT.TTF")  format('TTF');
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -15,6 +20,16 @@ a,
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
   padding: 3px;
+}
+
+p, button, div{
+  font-family: BAHNSCHRIFT !important;
+}
+
+button:hover {
+  scale: 102%;
+  box-shadow: 1px 1px 10px 0px #80808096;
+  transition-duration: 0.15s;
 }
 
 @media (hover: hover) {
